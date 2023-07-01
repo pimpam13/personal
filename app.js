@@ -146,11 +146,7 @@ async function main() {
   });
 
 
-  let port = NODE_ENV;
-  if (port == null || port == "") {
-    port = 3000;
-  }
-  app.listen(port, function () {
+  app.listen(3000, function () {
     console.log("Server is up and running!");
   });
 }
