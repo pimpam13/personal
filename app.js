@@ -145,7 +145,12 @@ async function main() {
     res.render("about");
   });
 
-  app.listen(3000, function () {
+
+  let port = NODE_ENV;
+  if (port == null || port == "") {
+    port = 3000;
+  }
+  app.listen(port, function () {
     console.log("Server is up and running!");
   });
 }
